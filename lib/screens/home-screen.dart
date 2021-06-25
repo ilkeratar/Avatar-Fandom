@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:avatar_fandom/burc-gruplar.dart';
 import 'package:avatar_fandom/pallete.dart';
 import 'package:avatar_fandom/screens/quiz/quiz-screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './main-drawer.dart';
 

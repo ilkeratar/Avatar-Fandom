@@ -1,8 +1,10 @@
 import 'package:avatar_fandom/burc-gruplar.dart';
 import 'package:avatar_fandom/screens/about-screen.dart';
 import 'package:avatar_fandom/screens/avatar-list.dart';
+import 'package:avatar_fandom/screens/karakter-yarat.dart';
 import 'package:avatar_fandom/screens/login-screen.dart';
 import 'package:avatar_fandom/screens/profil-screen.dart';
+import 'package:avatar_fandom/screens/pokelist.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -71,6 +73,16 @@ class MainDrawer extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => AvatarListesi(),
                   )),}),
+              CustomListTile(Icons.supervised_user_circle,'Karakter Yarat',()=>{Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => KarakterYarat(),
+                  )),}),
+              CustomListTile(Icons.supervised_user_circle,'Pokemon Listesi',()=>{Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PokeListesi(),
+                  )),}),
               CustomListTile(Icons.info_outline,'Hakkında',()=>{Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -110,7 +122,6 @@ class CustomListTile extends StatelessWidget {
           border: Border(bottom: BorderSide(color:Colors.grey.shade400,width: 1))
         ),
         child: InkWell(
-          splashColor: Colors.purpleAccent,
           onTap: onTap,
           child: Container(
             height:60,

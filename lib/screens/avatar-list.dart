@@ -1,5 +1,10 @@
+import 'package:avatar_fandom/screens/avatar-grafik.dart';
 import 'package:flutter/material.dart';
 import 'package:avatar_fandom/chars.dart';
+import 'package:fl_chart/fl_chart.dart';
+import 'package:avatar_fandom/pie_data.dart';
+import 'package:avatar_fandom/pie_chart_sections.dart';
+import 'package:avatar_fandom/indicators_widget.dart';
 class AvatarListesi extends StatefulWidget {
   @override
   _AvatarListesiState createState() => _AvatarListesiState();
@@ -9,7 +14,25 @@ class _AvatarListesiState extends State<AvatarListesi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.lightBlueAccent,
-      appBar: AppBar(title: Text("Karakter Listesi"),backgroundColor: Colors.indigo,),
+      appBar: AppBar(title: Text("Karakter Listesi"),backgroundColor: Colors.indigo,
+        actions: <Widget>[ PopupMenuButton(
+            itemBuilder: (context){
+              return [
+                PopupMenuItem(
+                  child: ListTile(
+                    leading: Icon(Icons.account_circle_rounded,color: Colors.teal,),
+                    title: Text("Ulus Grafiği"),
+                    onTap: (){
+                      Navigator.pop(context);
+                      Navigator.push( context, MaterialPageRoute( builder: (context) => AvatarGrafik()), ).then((value) => setState(() {}));
+                    },
+                  ),
+                ),
+              ];
+            }
+        ),],
+      ),
+
       body: listehazirlama(),
     );
   }

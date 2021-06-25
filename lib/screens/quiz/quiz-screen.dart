@@ -64,7 +64,7 @@ class _QuizScreenState extends State<QuizScreen> {
             content: new Text("Başarı Yüzdeniz: %$puan"),
             actions: <Widget>[
               new FlatButton(
-                child: new Text("Başa Dön"),
+                child: new Text("Ana Sayfaya Dön"),
                 onPressed: () {
                   Navigator.of(context).pop(Navigator.of(context).pop());
 

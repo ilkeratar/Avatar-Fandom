@@ -15,7 +15,7 @@ class AboutScreen extends StatelessWidget {
             ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Bu uygulama Dr. Öğretim Üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu Mobil Programlama dersi kapsamında 193301064 numaralı İlker ATAR tarafından 30 Nisan 2021 günü yapılmıştır.",
+            child: Text("Bu uygulama Dr. Öğretim Üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu Mobil Programlama dersi kapsamında 193301064 numaralı İlker ATAR tarafından 25 Haziran 2021 günü yapılmıştır.",
             style: TextStyle(
               color: Colors.grey[300],
               fontSize: 16
